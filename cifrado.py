@@ -23,9 +23,8 @@ class Cifrado():
     def text(self, value):
         if isinstance(value, int):
             raise ValueError("Int values are not allowed")
-        elif isinstance(value, str):
-            if value.isalpha() == False:
-                raise ValueError("Only letters in str are allowed")
+        elif isinstance(value, str) and value.isalpha() == False:
+            raise ValueError("Only letters in str are allowed")   
         else:
             pass
             
